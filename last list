@@ -1,0 +1,3 @@
+program:- read(List), last(List,N), write(N), nl.
+
+:- program.
