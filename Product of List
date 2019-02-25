@@ -1,0 +1,9 @@
+program :- read(List), kali(List,N), write(N), nl.
+ 
+kali([],0).
+kali([H|T],X) :- kali_1(T,H,X).
+ 
+kali_1([],X,X).
+kali_1([H|T],H0,X) :- kali_1(T,H,X0), X is X0*H0.
+ 
+:- program.
