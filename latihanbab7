@@ -1,0 +1,91 @@
+/*1*/
+#include <iostream>
+using namespace std;
+
+int ganjilgenap (int n)
+{
+	if(n%2) cout << "ganjil" << endl;
+	else cout << "genap" << endl;
+	return n;
+}
+
+int main()
+{
+	int n;
+	cout << "masukkan bilangan: " <<endl;
+	cin>>n;
+	cout << "N adalah bilangan ";
+	ganjilgenap(n);
+	return 0;
+}
+
+/*2*/
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int n, i, sum=0;
+	cout << "banyaknya bilangan yang akan dijumlahkan: ";
+	cin>>n;
+	for(i=1; i<=n ;i++){
+		sum+=i;
+	}
+	cout << "hasil penjumlahan N bilangan adalah " << sum;
+	return 0;
+}
+
+/*4*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void jumlah(float a, float b)
+{
+	cout << a+b;
+}
+
+void kurang(float a, float b)
+{
+	cout<< a-b;
+}
+
+void kali(float a, float b)
+{
+	cout<<a*b;
+}
+	
+void bagi(float a, float b)
+{
+	cout<<a/b;
+}
+
+int main()
+{
+	int x,y;
+	cout << "MENU" <<endl;
+	cout << "\t"<< "1. penjumlahan" <<endl;
+	cout << "\t"<< "2. pengurangan" <<endl;
+	cout << "\t"<< "3. perkalian" <<endl;
+	cout << "\t"<< "4. pembagian" <<endl;
+	cout << "pilihan menu (1-4) : ";
+	int n;
+	cin>>n;
+	cin >>x>>y;
+	switch(n)
+	{
+		case 1 :
+			jumlah(x,y);
+			break;
+		case 2 :
+			kurang(x,y);
+			break;
+		case 3 :
+			kali(x,y);
+			break;
+		case 4 :
+			bagi(x,y);
+			break;		
+	}
+	return 0;
+}
